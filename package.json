@@ -1,6 +1,7 @@
 {
   "name": "infinite-blue-snippets",
 	"displayName": "Infinite Blue Snippets",
+  "publisher": "fmaceda",
 	"description": "Infinite blue rbv api snippets",
 	"version": "0.0.1",
 	"engines": {
@@ -9,6 +10,10 @@
 	"categories": [
 		"Other"
 	],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drixmux/infinite-blue-snippets.git"
+  },
 	"activationEvents": [
     "onCommand:infinite-blue-snippets.infiniteBlueDocs"
 	],
