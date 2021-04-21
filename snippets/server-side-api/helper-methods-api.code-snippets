@@ -1,0 +1,104 @@
+{
+  "rbv_api.getSettings": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getSettings",
+    "body": "rbv_api.getSettings();",
+    "description": "Purpose\nThis function returns the JSON of basic fields name and values pairs of settings object definition.\n\nReturn value\nA map of string key value pairs."
+  },
+  "rbv_api.getCurrentUser": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentUser",
+    "body": "rbv_api.getCurrentUser();",
+    "description": "Purpose\nThis function returns the JSON of field name and value pairs for the current user.\n\nReturn value\nA JSON object."
+  },
+  "rbv_api.getCurrentUserId": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentUserId",
+    "body": "rbv_api.getCurrentUserId();",
+    "description": "Purpose\nThis function returns the id of the current user.\n\nReturn value\nA long value."
+  },
+  "rbv_api.getCurrentCustomer": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentCustomer",
+    "body": "rbv_api.getCurrentCustomer();",
+    "description": "Purpose\nThis function returns the JSON of field name and value pairs for the current customer.\n\nReturn value\nA JSON Object."
+  },
+  "rbv_api.getCurrentCustomerId": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentCustomerId",
+    "body": "rbv_api.getCurrentCustomerId();",
+    "description": "Purpose\nThis function returns the id of the current customer.\n\nReturn value\nA long value."
+  },
+  "rbv_api.getCurrentPortalUser": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentPortalUser",
+    "body": "rbv_api.getCurrentPortalUser();",
+    "description": "Purpose\nThis function returns the JSON of field name and value pairs for the current portal user.\n\nReturn value\nA JSON Object."
+  },
+  "rbv_api.getCurrentPortalUserId": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentPortalUserId",
+    "body": "rbv_api.getCurrentPortalUserId();",
+    "description": "Purpose\nThis function returns the id of the current portal user.\n\nReturn value\nA long value."
+  },
+  "rbv_api.getRecord": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRecord",
+    "body": "rbv_api.getRecord(id);",
+    "description": "Purpose\nRetrieves all field data (including formulas) for a given record in JSON format whose id is passed.\n\nParameters\nid: A long value containing the record ID.\n\nReturn value\nA JSON object."
+  },
+  "rbv_api.getRecord2": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRecord2",
+    "body": "rbv_api.getRecord2(objDefName, id);",
+    "description": "Purpose\nRetrieves all field data (including formulas) for a given record in JSON format whose objDefName and id is passed.\n\nParameters\nobjDefName: Integration name of the object definition.\nid: A long value containing the record ID.\n\nReturn value\nA JSON object."
+  },
+  "rbv_api.getSystemProperty": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getSystemProperty",
+    "body": "rbv_api.getSystemProperty(key);",
+    "description": "Purpose\nThis function returns a fixed helper tokens used by the end user.\n\nParameters\nkey: Any valid lookup key from the following table to obtain the value of the system property.\n\tsystemName - In the Platform Private Cloud evaluation version, this property sets the link displayed in the upper-left corner of each page. Typically, this link is set to navigate to your web site. In the Platform Private Cloud licensed version, this property is configured in license.xml file. Default: Infinite Blue\n\thostName - This is the host name of Platform installation, for example, www.infiniteblue.com\n\tcpToken - A client principal token used to access a JSDO Invoke method on an OpenEdge Data Object from Platform Object script. This token can be used in an HTTP header under the header name X-OE-CLIENT-CONTEXT-ID.\n\tserverUrl - ServerURL value points to the current node IP address.\n\tdateToday - Today's date in the user-selected format\n\nReturn value\nString value for the key provided."
+  },
+  "rbv_api.getFormattedField": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getFormattedField",
+    "body": "rbv_api.getFormattedField(objDefName, objId, fieldName, suffix);",
+    "description": "Purpose\nThis function returns the formatted value of the field\n\nParameters\nobjDefName: The name of the object definition whose field value is retrieved\nobjId: ID of object record.\nfieldName: The name of the field whose formatted value is needed\nsuffix: Suffix/Code used to format the field value .\n\nReturn value\nString."
+  },
+  "rbv_api.getHeaderKeys": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getHeaderKeys",
+    "body": "rbv_api.getHeaderKeys();",
+    "description": "Purpose\nThis function returns all request header keys.\n\nReturn value\nAn array of strings."
+  },
+  "rbv_api.getHeaderValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getHeaderValue",
+    "body": "rbv_api.getHeaderValue(key);",
+    "description": "Purpose\nThis function returns the request header value.\n\nParameters\nkey: A valid lookup key in request header.\n\nReturn value\nResult as a string."
+  },
+  "rbv_api.getParameterKeys": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getParameterKeys",
+    "body": "rbv_api.getParameterKeys();",
+    "description": "Purpose\nThis function returns the list of request parameter keys.\n\nReturn value\nAn array of strings."
+  },
+  "rbv_api.getParameterValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getParameterValue",
+    "body": "rbv_api.getParameterValue(key);",
+    "description": "Purpose\nThis function returns the value for the request parameter.\n\nParameters\nkey: A valid lookup key in request parameter.\n\nReturn value\nResult as a string."
+  },
+  "rbv_api.getRequestBody": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRequestBody",
+    "body": "rbv_api.getRequestBody();",
+    "description": "Purpose\nThis function returns request body (applicable to PUT, POST, DELETE HTTP verbs only).\n\nReturn value\nString value of request body."
+  },
+  "rbv_api.setResponseBody": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setResponseBody",
+    "body": "rbv_api.setResponseBody(code, message, body, headers, contentType);",
+    "description": "Purpose\nThis is an optional API, which overrides default response options like statusCode, statusMessage, headers or Content-Type.\n\nParameters\ncode: A valid HTTP status code (integer).\nmessage: A message describing the status code (string)\nbody: A valid response body complying to given Content-Type (string)\nheaders: A simple key value map comprising custom headers value { String : String, ...}\ncontentType: A valid HTTP Content-Type value (String)\n\nReturn value\nNone"
+  },
+}

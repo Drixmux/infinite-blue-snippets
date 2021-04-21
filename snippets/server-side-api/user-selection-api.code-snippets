@@ -1,0 +1,38 @@
+{
+  "rbv_api.isViewed": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isViewed",
+    "body": "rbv_api.isViewed(objName, Id, userId);",
+    "description": "Purpose\nAccesses the viewed attribute of a record for a particular user. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of the record\nuserId: ID of the user who might have viewed the record\n\nReturn value\ntrue if a record was viewed"
+  },
+  "rbv_api.setViewed": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setViewed",
+    "body": "rbv_api.setViewed(objName, Id, userId, isViewed);",
+    "description": "Purpose\nSets the viewed attribute for a specified record and user. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nuserId: ID of the user who might have viewed the record\nisViewed: true or false\n\nReturn value\nNone"
+  },
+  "rbv_api.isFlagged": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isFlagged",
+    "body": "rbv_api.isFlagged(objName, Id, userId);",
+    "description": "Purpose\nDetermines whether a particular user flagged a record. Tip: Use the token {!#CURR_USER.id} to retrieve the ID of the currently logged-in user. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nuserId: ID of the user who might have flagged the record\n\nReturn value\ntrue if a record was flagged"
+  },
+  "rbv_api.setFlagged": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setFlagged",
+    "body": "rbv_api.setFlagged(objName, Id, userId, isFlagged);",
+    "description": "Purpose\nSets the flagged attribute for a specified record and user. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nuserId: ID of the user who might have flagged the record\nisFlagged: true or false\n\nReturn value\nNone"
+  },
+  "rbv_api.getSelectedIds": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getSelectedIds",
+    "body": "rbv_api.getSelectedIds(objName);",
+    "description": "Purpose\nGets an array of record ids selected by current user using check boxes in list view.\n\nParameters\nobjName: Integration name of object\n\nReturn value\nArray of record IDs"
+  },
+  "rbv_api.isAppInstalled": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isAppInstalled",
+    "body": "rbv_api.isAppInstalled(appId);",
+    "description": "Purpose\nReturns true if application with the given ID is installed for the current customer, false otherwise.\n\nParameters\nappId: Original ID of the application\n\nReturn value\ntrue or false"
+  },
+}

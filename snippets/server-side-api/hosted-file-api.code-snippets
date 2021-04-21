@@ -1,0 +1,14 @@
+{
+  "rbv_api.getHostedAsText": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getHostedAsText",
+    "body": "rbv_api.getHostedAsText(origId);",
+    "description": "Purpose\nReturns the content of a hosted file as a string. This method only works for text-based files such as those with extensions of .xml, .html, and .txt. This method only works with native Platform objects.\n\nParameters\norigId: Original ID of hosted file\n\nReturn value\nContent of hosted file as a string or NULL if file doesn't exist"
+  },
+  "rbv_api.getHostedAsBinary": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getHostedAsBinary",
+    "body": "rbv_api.getHostedAsBinary(origId);",
+    "description": "Purpose\nReturns the content of a hosted file as a base-64 encoded string. This method only works with native Platform objects.\n\nParameters\norigId: Original ID of hosted file\n\nReturn value\nThe content of a hosted file as a base-64 encoded string or NULL (if file does not exist)."
+  },
+}

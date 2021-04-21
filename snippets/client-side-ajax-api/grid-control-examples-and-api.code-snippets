@@ -1,0 +1,80 @@
+{
+  "rbf_addGridRow": {
+    "scope": "javascript",
+    "prefix": "rbf_addGridRow",
+    "body": "rbf_addGridRow(gridNo);",
+    "description": "Purpose\nAdds a new empty row to a grid.\n\nParameters\ngridNo: The 0-based number of Grid Control on page"
+  },
+  "rbf_delGridRow": {
+    "scope": "javascript",
+    "prefix": "rbf_delGridRow",
+    "body": "rbf_delGridRow(gridNo, rowIndex);",
+    "description": "Purpose\nDeletes the row with given index from a grid.\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nrowIndex: The row number. Row numbers start with 0."
+  },
+  "rbf_getGridControlComponent": {
+    "scope": "javascript",
+    "prefix": "rbf_getGridControlComponent",
+    "body": "rbf_getGridControlComponent(gridNo);",
+    "description": "Purpose\nReturns the GridControl object from the current page in the position specified by the gridNo parameter. You can also get a GridControl object using rbf_getPageComponent().\n\nParameters\ngridNo: The order in which the grid control appears on the page. For the first grid control on the page, the value is 0, for the second grid control on the page, the value is 1, and so on.\n\nReturn value\nThe specified GridControl object."
+  },
+  "rbf_getGridFieldContext": {
+    "scope": "javascript",
+    "prefix": "rbf_getGridFieldContext",
+    "body": "rbf_getGridFieldContext(gridNo, rowIndex, fieldName);",
+    "description": "Purpose\nReturns the GridFieldContext object for the specified grid control, row index, and field.\n\nParameters\ngridNo: The order in which the grid control appears on the page. For the first grid control on the page, the value is 0, for the second grid control on the page, the value is 1, and so on.\nrowIndex: The index of the row of the grid from which to return the field context.\nfieldName: The field integration name.\n\nReturn value\nThe specified ."
+  },
+  "rbf_getGridField": {
+    "scope": "javascript",
+    "prefix": "rbf_getGridField",
+    "body": "rbf_getGridField(gridNo);",
+    "description": "Purpose\nGets the name of the field that was last changed in the Grid.\n\nParameters\nParameter: Description\ngridNo: The 0-based number of Grid Control on page"
+  },
+  "rbf_getGridPicklistCode": {
+    "scope": "javascript",
+    "prefix": "rbf_getGridPicklistCode",
+    "body": "rbf_getGridPicklistCode(gridNo, fieldName, rowIndex);",
+    "description": "Purpose\nGets the integration code of a grid control picklist field with the given integration name at the specified row number. Returns null if the grid control does not exist on the current page.\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nfieldName: The integration name of the input field\nrowIndex: The row number. Row numbers start with 0.\n\nReturn value\nThe integration code of the grid control picklist field. Null if the grid control does not exist on the page."
+  },
+  "rbf_getGridValue2": {
+    "scope": "javascript",
+    "prefix": "rbf_getGridValue2",
+    "body": "rbf_getGridValue2(gridNo, fieldName, rowIndex);",
+    "description": "Purpose\n\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nfieldName: The integration name of the input field\nrowIndex: The row number. Row numbers start with 0."
+  },
+  "rbf_getMaxRowIndex2": {
+    "scope": "javascript",
+    "prefix": "rbf_getMaxRowIndex2",
+    "body": "rbf_getMaxRowIndex2(gridNo);",
+    "description": "Purpose\nReturns the maximum value for the rowIndex in a grid. This may be different from the total number of rows in the grid.\n\nParameters\ngridNo: The 0-based number of Grid Control on page."
+  },
+  "rbf_setGridContent2": {
+    "scope": "javascript",
+    "prefix": "rbf_setGridContent2",
+    "body": "rbf_setGridContent2(gridNo, fieldName, rowIndex, value);",
+    "description": "Purpose\nSets the HTML content for a formula or template field in GridControl. Has no effect if the fields don't exist in GridControl.\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nfieldName: The integration name of formula or template field\nrowIndex: The row number. Row numbers start with 0.\nvalue: The HTML content to be assigned to the cell."
+  },
+  "rbf_setGridPicklistCode": {
+    "scope": "javascript",
+    "prefix": "rbf_setGridPicklistCode",
+    "body": "rbf_setGridPicklistCode(gridNo, fieldName, rowIndex, optCode);",
+    "description": "Purpose\nSets integration code of picklist field in a grid control with the given integration name at the specified row number. Has no effect if a field or grid control does not exist on the current page. This function is similar to rbf_setPicklistCode().\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nfieldName: The integration name of the input field\nrowIndex: The row number. Row numbers start with 0.\noptCode: Value will be compared to the integration code of a particular picklist option"
+  },
+  "rbf_setGridValue2": {
+    "scope": "javascript",
+    "prefix": "rbf_setGridValue2",
+    "body": "rbf_setGridValue2(gridNo, fieldName, rowIndex, value);",
+    "description": "Purpose\nSets the value of a single editable field in the grid control with the given integration name at the specified row number. Has no effect if a field or grid control does not exist on the current page.\n\nParameters\ngridNo: The 0-based number of the grid control on the page\nfieldName: The integration name of the input field\nrowIndex: The row number. Row number start with 0.\nvalue: HTML content to set in field"
+  },
+  "rbf_showGridTotals": {
+    "scope": "javascript",
+    "prefix": "rbf_showGridTotals",
+    "body": "rbf_showGridTotals(gridNo);",
+    "description": "Purpose\nCalculate and display totals for grid.\n\nParameters\ngridNo: The 0-based number of Grid Control on page"
+  },
+  "rbf_sumGridColumn2": {
+    "scope": "javascript",
+    "prefix": "rbf_sumGridColumn2",
+    "body": "rbf_sumGridColumn2(gridNo, fieldName);",
+    "description": "Purpose\nRetrieves the sum of column values in a grid.\n\nParameters\ngridNo: The 0-based number of Grid Control on page\nfieldName: The integration name of formula or numeric input field"
+  },
+}

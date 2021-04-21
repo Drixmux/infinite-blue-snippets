@@ -1,0 +1,14 @@
+{
+  "rbv_api.jsonToString": {
+    "scope": "javascript",
+    "prefix": "rbv_api.jsonToString",
+    "body": "rbv_api.jsonToString(json);",
+    "description": "Purpose\nConverts a JSON object into a text string.\n\nParameters\njson: A JSON object\n\nReturn value\nA text string"
+  },
+  "rbv_api.stringToJson": {
+    "scope": "javascript",
+    "prefix": "rbv_api.stringToJson",
+    "body": "rbv_api.stringToJson(str);",
+    "description": "Purpose\nThis method parses a text string into a JSON object\n\nParameters\nstr: A string value\n\nReturn value\nA text string"
+  },
+}

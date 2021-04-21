@@ -1,0 +1,104 @@
+{
+  "rbv_api.getClassName": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getClassName",
+    "body": "rbv_api.getClassName(object);",
+    "description": "Purpose\nThis function retrieves the name of the class to which the specified object belongs.\n\nParameters\nobject: The specified object whose name of the class needs to be retrieved.\n\nReturn value\nName of the class in string."
+  },
+  "rbv_api.getCount": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCount",
+    "body": "rbv_api.getCount(viewId, filterName, filterValue);",
+    "description": "Purpose\nReturns the number of records in the selected view. Optionally, this method can filter by field name and value.\n\nParameters\nviewID: Original ID of view\nfilterName: Optional field integration name to filter results\nfilterValue: Optional field integration value to filter results\n\nReturn value\nNumber of records"
+  },
+  "rbv_api.getDateInISOFromUserFormat": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getDateInISOFromUserFormat",
+    "body": "rbv_api.getDateInISOFromUserFormat(date,format);",
+    "description": "Purpose\nThis function converts the input Date or Date/Time value from User format to ISO format. The values for Date or Date/Time are returned in the format as selected by the user from the localization settings.\n\nParameters\ndate: The Date or Date/Time value to be returned.\nformat: The format of the date to be returned. To convert input value into Date format, enter Date and to convert input value into Date/Time format, enter DateTime in the format parmeter.\n\nReturn value\nDate in ISO format"
+  },
+  "rbv_api.getDateInUserFormatFromISO": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getDateInUserFormatFromISO",
+    "body": "rbv_api.getDateInUserFormatFromISO(date,format);",
+    "description": "Purpose\nThis function converts the input Date or Date/Time value from ISO format to User format. The values for Date or Date/Time are returned in the format as selected by the user from the localization settings.\n\nParameters\ndate: The Date or Date/Time value to be returned.\nformat: The format of the date to be returned. To convert input value into Date format, enter Date and to convert input value into Date/Time format, enter DateTime in the format parmeter.\n\nReturn value\nDate in User format"
+  },
+  "rbv_api.selectQuery": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectQuery",
+    "body": "rbv_api.selectQuery(query, maxRows, arg1, arg2);",
+    "description": "Purpose\nRuns an SQL SELECT query and returns results as a 2D-array.\n\nParameters\nquery: SQL SELECT query\nmaxRows: Maximum number of rows to retrieve (1-20,000 range)\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result in a 2-D array"
+  },
+  "rbv_api.selectQuery2": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectQuery2",
+    "body": "rbv_api.selectQuery2(query, rowFrom, maxRows, arg1, arg2);",
+    "description": "Purpose\nSimilar to selectQuery(),selectQuery2() runs a query and returns the results as a 2D-array. The extra parameter, rowFrom, defines a starting point for results. This makes it possible to make several calls for objects that contain thousands of rows of data.\n\nParameters\nquery: SQL SELECT query\nrowFrom: Number of row to start output (0 based)\nmaxRows: Maximum number of rows to retrieve (1-20,000 range)\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result in a 2-D array"
+  },
+  "rbv_api.selectValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectValue",
+    "body": "rbv_api.selectValue(query, arg1, arg2);",
+    "description": "Purpose\nRuns an SQL SELECT query and returns a single value. This simplified version of rbv_api.selectQuery() is useful for calculating sum and performing other operations on single values.\n\nParameters\nquery: SQL SELECT query.\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result as a single value"
+  },
+  "rbv_api.selectNumber": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectNumber",
+    "body": "rbv_api.selectNumber(query, arg1, arg2);",
+    "description": "Purpose\nRuns a SQL SELECT query and returns a single decimal value. It is similar to the selectValue() method.\n\nParameters\nquery: SQL SELECT query.\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result as a decimal number"
+  },
+  "rbv_api.selectCustomerQuery": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectCustomerQuery",
+    "body": "rbv_api.selectCustomerQuery(custId, query, rowFrom, maxRows, arg1, arg2);",
+    "description": "Purpose\nSimilar to selectQuery2(), but is called from the master server and runs on the customer tenant with the specified ID.\n\nParameters\ncustId: ID of the customer record to query\nquery: SQL SELECT query.\nrowFrom: Number of row to start output (0 based)\nmaxRows: Maximum number of rows to retrieve (1-20,000 range)\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery results as a 2-D array"
+  },
+  "rbv_api.selectCustomerValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectCustomerValue",
+    "body": "rbv_api.selectCustomerValue(custId, query, arg1, arg2);",
+    "description": "Purpose\nSimilar to selectValue() returns a single value, but is called from the master server and runs on the customer with the specified ID.\n\nParameters\ncustId: ID of the customer record to query\nquery: SQL SELECT query.\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result as a single value"
+  },
+  "rbv_api.selectCustomerNumber": {
+    "scope": "javascript",
+    "prefix": "rbv_api.selectCustomerNumber",
+    "body": "rbv_api.selectCustomerNumber(custId, query, arg1, arg2);",
+    "description": "Purpose\nSame as selectNumber(), but is called from the master server and runs on the customer tenant with the specified ID.\n\nParameters\ncustId: ID of the customer record to query\nquery: SQL SELECT query.\nargs: Variable number of parameters passed to query (optional)\n\nReturn value\nQuery result as a number"
+  },
+  "rbv_api.getRelatedRecordIds": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedRecordIds",
+    "body": "rbv_api.getRelatedRecordIds(objName, relFieldName, id);",
+    "description": "Purpose\nReturns an array of related record IDs for the specified relationship field and object record ID.\n\nParameters\nobjName: Integration name of the object.\nrelFieldName: Integration name of the relationship field.\nid: Record ID for which related records have to be fetched.\n\nReturn value\nAn array of related record IDs."
+  },
+  "rbv_api.getRelatedIds": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedIds",
+    "body": "rbv_api.getRelatedIds(relName, id);",
+    "description": "Purpose\nFor native Platform objects, this method returns an array of related IDs for a specified relationship and object record ID.\n\nParameters\nrelName: Integration name of relationship\nid: Record ID from one side of the relationship\n\nReturn value\nAn array of related record IDs"
+  },
+  "rbv_api.getRelatedIds2": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedIds2",
+    "body": "rbv_api.getRelatedIds2(relName, objName, Id);",
+    "description": "Purpose\nFor external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), returns an array of related IDs for a specified relationship and record ID.\n\nParameters\nrelName: Integration name of the relationship.\nObjName: Integration name of the object.\nId: Record ID from one side of the relationship.\n\nReturn value\nAn array of related record IDs"
+  },
+  "rbv_api.getRelatedRecordFields": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedRecordFields",
+    "body": "rbv_api.getRelatedRecordFields(objName,relFieldName, id, relRecordFieldName);",
+    "description": "Purpose\nReturns an array of related record field values for the specified relationship field and object record ID.\n\nParameters\nobjName: Integration name of the object.\nrelFieldName: Integration name of the relationship field.\nid: Record ID for which related records have to be fetched.\nrelRecordFieldName: Integration name of the field whose values have to be fetched.\n\nReturn value\nArray of field values from related record field values."
+  },
+  "rbv_api.getRelatedFields": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedFields",
+    "body": "rbv_api.getRelatedFields(relName, id, fieldName);",
+    "description": "Purpose\nFor native Platform objects, returns an array of field values from related records for a given relationship and Object ID.\n\nParameters\nrelName: Integration name of relationship\nid: Record ID from one side of the relationship\nfieldName: Integration name of field in related object\n\nReturn value\nArray of field values from related records or NULL if no related records exist."
+  },
+  "rbv_api.getRelatedFields2": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRelatedFields2",
+    "body": "rbv_api.getRelatedFields2(relName, objName, Id, fieldName);",
+    "description": "Purpose\nFor external objects (such as those mapped to external tables, to OpenEdge Service objects, or through a HDP connection), returns an array of field values from related records for a given relationship and record ID.\n\nParameters\nrelName: Integration name of relationship.\nobjName: Integration name of Object.\nId: Record ID from one side of the relationship.\nfieldName: Integration name for field in related object.\n\nReturn value\nArray of field values from related records or NULL if no related records exist."
+  },
+}

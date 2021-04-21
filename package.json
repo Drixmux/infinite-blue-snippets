@@ -1,0 +1,153 @@
+{
+  "name": "infinite-blue-snippets",
+	"displayName": "Infinite Blue Snippets",
+	"description": "Infinite blue rbv api snippets",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+    "onCommand:infinite-blue-snippets.infiniteBlueDocs"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "infinite-blue-snippets.infiniteBlueDocs",
+				"title": "Infinite Blue Docs"
+			}
+		],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/query-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/object-script-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/user-selection-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/miscellaneous-methods.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/date-time-currency-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/pdf-processing-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/hosted-file-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/http-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/xml-processing-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/json-processing-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/trigger-to-trigger-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/trigger-environment-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/debugging-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/log-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/email-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/user-session-data-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/server-side-api/helper-methods-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/queries.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/field-manipulation.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/data-formatting.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/grid-control-examples-and-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/grid-control-examples-and-api-ajax-metadata-api.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/miscellaneous.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/display-functions.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/client-side-ajax-api/user-session-data.code-snippets"
+      }
+    ]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "yarn run test-compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0",
+		"ts-loader": "^8.0.14",
+		"webpack": "^5.19.0",
+		"webpack-cli": "^4.4.0"
+	}
+}

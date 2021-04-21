@@ -1,0 +1,8 @@
+{
+  "rbv_api.example": {
+    "scope": "javascript",
+    "prefix": "rbv_api.example",
+    "body": "rbv_api.example();",
+    "description": "Purpose\n\n\nParameters\n\n\nReturn value\n"
+  },
+}

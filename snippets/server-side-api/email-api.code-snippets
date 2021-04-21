@@ -1,0 +1,38 @@
+{
+  "rbv_api.openIMAP": {
+    "scope": "javascript",
+    "prefix": "rbv_api.openIMAP",
+    "body": "rbv_api.openIMAP(hostName, port, userName, password, mailProps);",
+    "description": "Purpose\nOpens connection to an external email server (such as Gmail) using IMAP protocol. It must be called once before reading data from IMAP server.\n\nParameters\nhostName: The name of the external mail server.\nport: The port number for an SSL connection on the external mail server (typically 993).\nuserName: The user's name (typically user's email address) on the external mail server.\npassword: The user's password on the external mail server.\nmailProps: The optional array of properties to be set on the external mail server. This may be null.\n\nReturn value\nNone"
+  },
+  "rbv_api.openPOP3": {
+    "scope": "javascript",
+    "prefix": "rbv_api.openPOP3",
+    "body": "rbv_api.openPOP3(hostName, port, userName, password, mailProps);",
+    "description": "Purpose\nOpens connection to an external email server (such as Microsoft Exchange) using POP3 protocol. It must be called once before reading data from POP3 server.\n\nParameters\nhostName: The name of the external mail server.\nport: The port number for an SSL connection on the external mail server (typically 995).\nuserName: The user's name (typically user's email address) on the external mail server.\npassword: The user's password on the external mail server.\nmailProps: The optional array of properties to be set on the external mail server. This may be null.\n\nReturn value\nNone"
+  },
+  "rbv_api.getMailMessageCount": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getMailMessageCount",
+    "body": "rbv_api.getMailMessageCount();",
+    "description": "Purpose\nReturns the number of messages in the INBOX folder for the logged in user.\n\nReturn value\nNumber of email messages."
+  },
+  "rbv_api.getMailMessage": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getMailMessage",
+    "body": "rbv_api.getMailMessage(msgNo);",
+    "description": "Purpose\nReturns the specified number of email messages from the INBOX folder of the logged in user.\n\nParameters\nmsgNo: The number of email messages.\n\nReturn value\nObject representing message. The following properties are available:\n\tto: address \"to\"\n\tcc: address \"CC\"\n\tfrom: name of sender if available, else, address \"from\"\n\tfromEmail: address \"from\"\n\tsubject: subject of email message\n\tbody: body of email message as HTML\n\ttext: body of email message as plain text\n\tdate: date and time of email message as plain text"
+  },
+  "rbv_api.getMailMessages": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getMailMessages",
+    "body": "rbv_api.getMailMessages(start, end);",
+    "description": "Purpose\nReturns email messages based on specified start and end indexes (1-based) from the INBOX folder of the logged in user.\n\nParameters\nstart: The start index (1-based) of message in the INBOX folder.\nend: The end index (1-based) of message in the INBOX folder.\n\nReturn value\nArray of objects representing messages."
+  },
+  "rbv_api.closeMailSession": {
+    "scope": "javascript",
+    "prefix": "rbv_api.closeMailSession",
+    "body": "rbv_api.closeMailSession();",
+    "description": "Purpose\nCloses connection to a connected external email server.\n\nReturn value\nNone"
+  },
+}

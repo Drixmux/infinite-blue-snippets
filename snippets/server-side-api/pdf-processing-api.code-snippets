@@ -1,0 +1,14 @@
+{
+  "rbv_api.getPDFProperty": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getPDFProperty",
+    "body": "rbv_api.getPDFProperty(encodedValue, property);",
+    "description": "Purpose\nReturns the specified property of the PDF document specified as a base-64 encoded string. This method only works with native Platform objects.\n\nParameters\nencodedValue: base-64 encoded string representing PDF document\nProperty: One of the following: TITLE, AUTHOR, CREATIONDATE, CREATOR, KEYWORDS, MODDATE, ENCRYPTED, ERROR\n\nReturn value\nProperty of PDF document as a string"
+  },
+  "rbv_api.concatPDF": {
+    "scope": "javascript",
+    "prefix": "rbv_api.concatPDF",
+    "body": "rbv_api.concatPDF(encodedValue1, encodedValue2);",
+    "description": "Purpose\nConcatenates two or more PDF documents specified as base-64 encoded strings. This method only works with native Platform objects.\n\nParameters\nencodedValue1: base-64 encoded string representing 1st PDF document\nencodedValue2, ...: base-64 encoded string representing PDF document(s) to concatenate\n\nReturn value\nMerged PDF document as a base-64 encoded string"
+  },
+}

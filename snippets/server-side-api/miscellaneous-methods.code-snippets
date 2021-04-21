@@ -1,0 +1,92 @@
+{
+  "rbv_api.getIdByCode": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getIdByCode",
+    "body": "rbv_api.getIdByCode(objName, fieldName, code);",
+    "description": "Purpose\nReturns the ID of a status or a picklist item with the given integration code.\n\nParameters\nobjName: Integration name for object\nfieldName: Integration name of workflow status or picklist\ncode: Integration name of status or picklist item\n\nReturn value\nID of item or -1"
+  },
+  "rbv_api.getCodeById": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCodeById",
+    "body": "rbv_api.getCodeById(objName, fieldName, id);",
+    "description": "Purpose\nReturns the code of a status or a picklist item with the given ID.\n\nParameters\nobjName: Integration name of object\nfieldName: Integration name of workflow status or picklist\n\nReturn value\nCode of item or null"
+  },
+  "rbv_api.getIdByOriginalId": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getIdByOriginalId",
+    "body": "rbv_api.getIdByOriginalId(entityType, origId);",
+    "description": "Purpose\nGiven the original ID for an entity and an entity type, returns the entity's ID.\n\nParameters\nentityType: A string indicating the type of entity. Can be one of \"object\", \"field\", \"relationship\", \"webpage\", \"view\", \"template\", \"report\", \"chart\", \"gauge\", \"trigger\", \"process\", \"status\", \"action\", \"button\", or \"datamap\".\norigId: The original ID of the entity.\n\nReturn value\nIf successful, the ID of the specified entity. If no entity of the specified type with the specified original ID exists, throws an exception."
+  },
+  "rbv_api.getPicklist": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getPicklist",
+    "body": "rbv_api.getPicklist(objName, fieldName, mainValueId);",
+    "description": "Purpose\nReturns items available for selected picklist field (including radio buttons and groups of check box fields) as a JSON array. Each array entry has the elements name, id, and code.\n\nParameters\nobjName: The object integration name.\nfieldName: The picklist field integration name.\nmainValueId: The ID of the main picklist item (optional, for dependent picklists only).\n\nReturn value\nA JSON array of picklist items"
+  },
+  "rbv_api.getRoleById": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getRoleById",
+    "body": "rbv_api.getRoleById(roleId);",
+    "description": "Purpose\nReturns information about the specified role in JSON format. Throws an exception if roleId evaluates to Super Admin.\n\nParameters\nroleId: The original ID of the role.\n\nReturn value\nThe integration code, name, description, ID, and original ID of the role in JSON format."
+  },
+  "rbv_api.getValueById": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getValueById",
+    "body": "rbv_api.getValueById(objName, fieldName, id);",
+    "description": "Purpose\nReturns the value of a status or a picklist item with the given ID.\n\nParameters\nobjName: Integration name for object\nfieldName: Integration name of workflow status or picklist\nid: ID of status or picklist item\n\nReturn value\nText value of item or null"
+  },
+  "rbv_api.runReport": {
+    "scope": "javascript",
+    "prefix": "rbv_api.runReport",
+    "body": "rbv_api.runReport(reportId, filterName, filterValue);",
+    "description": "Purpose\n\n\nParameters\nreportId: The original ID of the report.\nfilterName: An optional field that specifies the name of the field to filter.\nfilterValue: Specifies a value for the field. Only records with this value will be added to the report.\n\nReturn value\nBase-64 encoded string."
+  },
+  "rbv_api.runTemplate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.runTemplate",
+    "body": "rbv_api.runTemplate(objName, Id, templateId);",
+    "description": "Purpose\nRuns a document template on a specified object record and returns it as a base-64 encoded string. This method only works with native Platform objects.\n\nParameters\nobjName: The object integration name.\nId: The ID of the record.\ntemplateId: The original ID of the document template.\n\nReturn value\nThe template as a base-64 encoded String."
+  },
+  "rbv_api.formatUsingMask": {
+    "scope": "javascript",
+    "prefix": "rbv_api.formatUsingMask",
+    "body": "rbv_api.formatUsingMask(value, mask);",
+    "description": "Purpose\nFormats a string containing digits as specified in the mask parameter.\n\nParameters\nvalue: The string to format\nmask: The input mask, which uses # as a placeholder for a digit\n\nReturn value\nInput formatted"
+  },
+  "rbv_api.toJSDate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.toJSDate",
+    "body": " rbv_api.toJSDate(dateObject);",
+    "description": "Purpose\nThis function converts an input Date or Date/Time value into a Javascript native object.\n\nParameters\ndateObject: The input Date or Date/Time value to be converted into a Javascript native object.\n\nReturn value\nJavascript date object."
+  },
+  "rbv_api.toJava": {
+    "scope": "javascript",
+    "prefix": "rbv_api.toJava",
+    "body": "rbv_api.toJava(jsObject);",
+    "description": "Purpose\nThis function converts an input Date or Date/Time value into a Java object.\n\nParameters\njsObject: The input Date or Date/Time value to be converted into a Java object.\n\nReturn value\nJava date object."
+  },
+  "rbv_api.toJS": {
+    "scope": "javascript",
+    "prefix": "rbv_api.toJS",
+    "body": "rbv_api.toJS(javaObject);",
+    "description": "Purpose\nThis function converts a Java object to a native Javascript object.\n\nParameters\njavaObject: The Java object to be converted into a native Javascript object.\n\nReturn value\nJavascript native object."
+  },
+  "rbv_api.unescapeJava": {
+    "scope": "javascript",
+    "prefix": "rbv_api.unescapeJava",
+    "body": "rbv_api.unescapeJava(input);",
+    "description": "Purpose\nThis function returns the input after unescaping the literals.\n\nParameters\ninput: The input string to unescape the literals.\n\nReturn value\nA new unescaped string."
+  },
+  "rbv_api.encodeBase64String": {
+    "scope": "javascript",
+    "prefix": "rbv_api.encodeBase64String",
+    "body": "rbv_api.encodeBase64String(str, charSetName);",
+    "description": "Purpose\nThis function encodes input string in supplied character-encoding scheme into base64.\n\nParameters\nstr: The input string to be encoded into base64.\ncharSetName: Name of the character-encoding scheme of input string. Currently only UTF-8 or ISO-8859-1 schemes are supported.\n\nReturn value\nA base64 encoded string."
+  },
+  "rbv_api.decodeBase64String": {
+    "scope": "javascript",
+    "prefix": "rbv_api.decodeBase64String",
+    "body": "rbv_api.decodeBase64String(str, charSetName);",
+    "description": "Purpose\nThis function returns a decoded string in supplied character-encoding scheme.\n\nParameters\nstr: The input string to be decoded from base64.\ncharSetName: Name of the character-encoding scheme of resultant string. Currently only UTF-8 or ISO-8859-1 schemes are supported.\n\nReturn value\nA decoded string."
+  },
+}

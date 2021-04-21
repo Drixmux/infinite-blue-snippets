@@ -1,0 +1,32 @@
+{
+  "rbv_api.setSessionData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setSessionData",
+    "body": "rbv_api.setSessionData(key, value);",
+    "description": "Purpose\nhis function sets user session data as a key/value pair. The maximum number of key/value pairs is 50. If you set a value for an existing key, the new value overrides the previous value.\n\nParameters\nkey: A string that is the lookup key for user session data. The maximum length of a key is 50 characters.\nvalue: The value associated with key. The value can be a boolean, number, string (maximum length is 1000 characters), or null (where null is the value).\n\nReturn value\nThe success message \"Session Data set successfully\" or throws exception upon error. Exception messages include:\n\tEmpty Key Received! — No input was passed\n\tInvalid Input — Input was in the wrong format\n\tLimit Violation. Max Allowed: 50 keys reached — User has already stored the maximum of 50 key/value pairs"
+  },
+  "rbv_api.getSessionData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getSessionData",
+    "body": "rbv_api.getSessionData(key);",
+    "description": "Purpose\nFor user session data, this function returns the value for the specified key.\n\nParameters\nkey: A string that is the lookup key for user session data. The maximum length of a key is 50 characters.\n\nReturn value\nIf successful, returns the value associated with that key. Note that you should call JSON.parse() on the response to get the result in the correct JavaScript data type (see example below). Throws an exception if there is no value associated with the key. Exception messages include:\n\tEmpty key received! — No key parameter was passed\n\tNo Mappings Set for [key] — There is no value associated with the specified key or there is no user session data to retrieve"
+  },
+  "rbv_api.getAllSessionData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getAllSessionData",
+    "body": "rbv_api.getAllSessionData();",
+    "description": "Purpose\nFor user session data, this function returns a complete map of key/value pairs stored as user session data as a JavaScript object. See User session data API for more information about user session data.\n\nReturn value\nIf successful, returns a complete map of key/value pairs stored as user session data as a JavaScript object. Note that you should call JSON.parse() on the response to get the result in the correct JavaScript data types (see example below). If there is no user session data, throws an exception with the string No Custom Session Data is Set by User."
+  },
+  "rbv_api.removeSessionData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.removeSessionData",
+    "body": "rbv_api.removeSessionData(key);",
+    "description": "Purpose\nFor user session data, this function removes the session data for the specified key.\n\nParameters\nkey: A string that is the lookup key for user session data. The maximum length of a key is 50 characters.\n\nReturn value\nIf successful, returns the string OK. If unsuccessful, throws an exception with one of the following messages:\n\tEmpty key received! — No key parameter was passed\n\tNo Mappings Set for [key] — There is no value associated with the specified key or there is no user session data to retrieve"
+  },
+  "rbv_api.removeAllSessionData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.removeAllSessionData",
+    "body": "rbv_api.removeAllSessionData();",
+    "description": "Purpose\nFor user session data, this function removes all user session data.\n\nReturn value\nIf successful, returns the string OK."
+  },
+}

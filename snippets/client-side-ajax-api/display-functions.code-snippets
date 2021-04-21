@@ -1,0 +1,116 @@
+{
+  "rbf_activatePageTab": {
+    "scope": "javascript",
+    "prefix": "rbf_activatePageTab",
+    "body": "rbf_activatePageTab(tabIndex);",
+    "description": "Purpose\nActivate page-level tab with given index (only for pages where tabs are enabled).\n\nParameters\ntabIndex: The 0-based index of page level tab to be activated"
+  },
+  "rbf_getFieldContext": {
+    "scope": "javascript",
+    "prefix": "rbf_getFieldContext",
+    "body": "rbf_getFieldContext(fieldIntegrationName);",
+    "description": "Purpose\nFor any field in an object record form on a new, edit, status change, or quick create page, this function returns a FieldContext object for that field. The FieldContext object encapsulates state and behavior details for the associated field. See FieldContext for more information about the FieldContext object and its interface.\n\nParameters\nfieldIntegrationName: The integration name of the field"
+  },
+  "rbf_getPageComponent": {
+    "scope": "javascript",
+    "prefix": "rbf_getPageComponent",
+    "body": "rbf_getPageComponent(componentId);",
+    "description": "Purpose\nCharts, grids, and tabular reports are represented as PageComponent objects in the new UI. This function returns a PageComponent object for a given component. The PageComponent object can then be used to refresh an individual page component or to access its Kendo configuration object. See PageComponent for more information about PageComponent and its interface.\n\nParameters\ncomponentId: For charts and grids, the original ID of the section that contains the chart or grid (available in the section's Properties menu). For reports, the original ID of the report (available in the System Information section when viewing the report)."
+  },
+  "rbf_getPageContext": {
+    "scope": "javascript",
+    "prefix": "rbf_getPageContext",
+    "body": "rbf_getPageContext();",
+    "description": "Purpose\nThis function returns a PageContext object for the current page. The PageContext object encapsulates all state and behavior of a page.. See PageContext for more information about the PageContext object and its interface.\n\nReturn value\nThe PageContext object for the current page."
+  },
+  "rbf_getSectionIdByTitle": {
+    "scope": "javascript",
+    "prefix": "rbf_getSectionIdByTitle",
+    "body": "rbf_getSectionIdByTitle(sectionTitle);",
+    "description": "Purpose\nThis function finds ID of section with given title or null if section not found. This ID can be used in rbf_setSectionCollapse and rbf_showOrHideSection API.\nImportant: For multi-lingual customers sectionTitle parameter must use customer's base language, not user selected language.\n\nParameters\nsectionTitle: Title of section on current page"
+  },
+  "rbf_getViewSelector": {
+    "scope": "javascript",
+    "prefix": "rbf_getViewSelector",
+    "body": "rbf_getViewSelector(fieldName);",
+    "description": "Purpose\nThis function returns the view ID used by a lookup field for both auto-complete and pop-up selectors.\n\nParameters\nfieldName: The integration name of lookup field"
+  },
+  "rbf_growl": {
+    "scope": "javascript",
+    "prefix": "rbf_growl",
+    "body": "rbf_growl(title, message, type);",
+    "description": "Purpose\nDisplays a growl-type floating notification in the upper right side of the screen.\n\nParameters\ntitle: Optional title to display. If none is specified, a default title will display.\nmessage: The notification. If null or empty, the notification will not display.\ntype: One of info, success, error, or warn. If not specified, defaults to warn."
+  },
+  "rbf_growlError": {
+    "scope": "javascript",
+    "prefix": "rbf_growlError",
+    "body": "rbf_growlError(title, message);",
+    "description": "Purpose\nDisplays a growl-type floating notification in the upper right side of the screen. End-users have to close the notification to dismiss it.\n\nParameters\ntitle: Optional title to display. If none is specified, a default title will display.\nmessage: The notification. If null or empty, the notification will not display."
+  },
+  "rbf_hideGrowl": {
+    "scope": "javascript",
+    "prefix": "rbf_hideGrowl",
+    "body": "rbf_hideGrowl();",
+    "description": "Purpose\nHides a notification if one is being displayed."
+  },
+  "rbf_hideInfoMessage": {
+    "scope": "javascript",
+    "prefix": "rbf_hideInfoMessage",
+    "body": "rbf_hideInfoMessage();",
+    "description": "Purpose\nThis function hides the status message at the top of the page. This method implementation calls rbf_hideGrowl()."
+  },
+  "rbf_growlInfo": {
+    "scope": "javascript",
+    "prefix": "rbf_growlInfo",
+    "body": "rbf_growlInfo(title, message);",
+    "description": "Purpose\nDisplays a growl-type floating notification in the upper right side of the screen. The notification closes automatically after approximately 3.5 seconds.\n\nParameters\ntitle: Optional title to display. If none is specified, a default title will display.\nmessage: The notification. If null or empty, the notification will not display."
+  },
+  "rbf_growlSuccess": {
+    "scope": "javascript",
+    "prefix": "rbf_growlSuccess",
+    "body": "rbf_growlSuccess(title, message);",
+    "description": "Purpose\nDisplays a growl-type floating success notification in the upper right side of the screen. The notification closes automatically after approximately 3.5 seconds.\n\nParameters\ntitle: Optional title to display. If none is specified, a default title will display.\nmessage: The notification. If null or empty, the notification will not display."
+  },
+  "rbf_growlWarning": {
+    "scope": "javascript",
+    "prefix": "rbf_growlWarning",
+    "body": "rbf_growlWarning(title, message);",
+    "description": "Purpose\nDisplays a growl-type floating notification in the upper right side of the screen. End-users have to close the notification to dismiss it.\n\nParameters\ntitle: Optional title to display. If none is specified, a default title will display.\nmessage: The notification. If null or empty, the notification will not display."
+  },
+  "rbf_showInfoMessage": {
+    "scope": "javascript",
+    "prefix": "rbf_showInfoMessage",
+    "body": "rbf_showInfoMessage(message, isError);",
+    "description": "Purpose\nDisplays a status message on the page.\n\nParameters\nmessage: The message text\nisError: Set as Boolean true in case of error messages, otherwise false."
+  },
+  "rbf_showOrHideField": {
+    "scope": "javascript",
+    "prefix": "rbf_showOrHideField",
+    "body": "rbf_showOrHideField(fieldName, showField, doNotHideResponsiveColumn);",
+    "description": "Purpose\nThis function shows or hides a field and its label. It will have no effect if the field is not shown on the page. On view pages, this API can be used in the page’s onLoad script; on edit pages, it can be used in any event handling code.\n\nParameters\nfieldName: The integration name of the field\nshowField: If true, show the field and its label. If false, hide the field and its label.\ndoNotHideResponsiveColumn: Optional. If true, Platform hides only the value of the field, not the column itself. The column for the hidden field maintains its position regardless of the screen size. If false, Platform hides both the value of the field and its column. The value in the next column will take its position. Defaults to false."
+  },
+  "rbf_showOrHidePageTab": {
+    "scope": "javascript",
+    "prefix": "rbf_showOrHidePageTab",
+    "body": "rbf_showOrHidePageTab(tabIndex, showTab);",
+    "description": "Purpose\nShow or hide page-level tab with given index (only for pages where tabs are enabled).\n\nParameters\ntabIndex: The 0-based index of page level tab to be activated\nshowTab: If true, show tab, if false, hide tab"
+  },
+  "rbf_showOrHideSection": {
+    "scope": "javascript",
+    "prefix": "rbf_showOrHideSection",
+    "body": "rbf_showOrHideSection(sectionId, showSection);",
+    "description": "Purpose\nThis function hides or shows a Page's section. It will have no effect if the section does not exist.\nThe ID for any section can be found by selecting that section while editing the page in the Page Editor. Highlight the Page section by clicking on its header and use the \"Original ID\" parameter shown in the Properties box. You can also use rbf_getSectionIdByTitle().\n\nParameters\nsectionId: The original ID of page's section (can be found in Page Editor)\nshowSection: If true, show section, if false, hide section"
+  },
+  "rbf_setSectionCollapse": {
+    "scope": "javascript",
+    "prefix": "rbf_setSectionCollapse",
+    "body": "rbf_setSectionCollapse(sectionId, collapsed);",
+    "description": "Purpose\nThis function collapses or expands the Page's section. It will have no effect if the section does not exist or is non-collapsible.\n\nParameters\nsectionId: Original ID of Page's section (can be found in Page Editor)\ncollapsed: If true, collapse section, if false, expand section"
+  },
+  "rbf_setViewSelector": {
+    "scope": "javascript",
+    "prefix": "rbf_setViewSelector",
+    "body": "rbf_setViewSelector(fieldName, selectorViewId);",
+    "description": "Purpose\nThis function sets the view ID used by a lookup field for both auto-complete and pop-up selectors.\nImportant: This function cannot be used on dependent lookups. This function only apply for \"Selector\" style lookup fields.\n\nParameters\nfieldName: The integration name of lookup field\nselectorViewId: ID of view to use"
+  },
+}

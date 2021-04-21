@@ -1,0 +1,122 @@
+{
+  "rbf_addOnLoadMethod": {
+    "scope": "javascript",
+    "prefix": "rbf_addOnLoadMethod",
+    "body": "rbf_addOnLoadMethod(callback);",
+    "description": "Purpose\nAttaches an onload event handler function to a page. This function is useful as a shorthand for adding an onload event handler function to a page. Call this function in a script or HTML component on the page for which you want to add an onload event handler. This function works for both the New UI and the Classic UI. For the New UI, it works for both page refresh using AJAX as well as for a complete page load.\n\nParameters\ncallback: The name of the function to use as a onload event handler."
+  },
+  "rbf_getCodeById": {
+    "scope": "javascript",
+    "prefix": "rbf_getCodeById",
+    "body": "rbf_getCodeById(objName, fieldName, id, callback);",
+    "description": "Purpose\nReturns the code of an item from a picklist, status, radio buttons, or group of checkboxes field for the specified ID.\n\nParameters\nobjName: The object definition integration name\nfieldName: The integration name of field\nid: ID of field item\ncallback: The callback function that will receive code of field item as first parameter (null if not found)."
+  },
+  "rbf_getExchangeRate": {
+    "scope": "javascript",
+    "prefix": "rbf_getExchangeRate",
+    "body": "rbf_getExchangeRate(srcCode, destCode, date, callback);",
+    "description": "Purpose\nReturns an exchange rate between two currencies on a given date.\n\nParameters\nsrcCode: The currency code to convert from\ndestCode: The currency code to convert to\ndate: The date for exchange rate (current date by default)\ncallback: The callback function that will receive exchange rate as first parameter (null if not found)"
+  },
+  "rbf_getIdByCode": {
+    "scope": "javascript",
+    "prefix": "rbf_getIdByCode",
+    "body": "rbf_getIdByCode(objName, fieldName, code, callback);",
+    "description": "Purpose\nReturns the ID of an item from a picklist, status, radio buttons, or group of checkboxes field for the specified code.\n\nParameters\nobjName: Object definition integration name\nfieldName: The integration name of field\ncode: The integration name of the field item\ncallback: The callback function that will receive the ID of field item as first parameter (-1 if not found)."
+  },
+  "rbf_getIdByOriginalId": {
+    "scope": "javascript",
+    "prefix": "rbf_getIdByOriginalId",
+    "body": "rbf_getIdByOriginalId(entityType, originalId, callback);",
+    "description": "Purpose\nGiven the original ID and an entity type, passes the entity's ID to the specified callback function. If an entity of the specified type with the specified original ID does not exist, sets the HTTP status to 500 and executes the error callback function configured using rbf_setErrorsCallback().\n\nParameters\nentityType: A string indicating the type of entity. Can be one of \"object\", \"field\", \"relationship\", \"webpage\", \"view\", \"template\", \"report\", \"chart\", \"gauge\", \"trigger\", \"process\", \"status\", \"action\", \"button\", or \"datamap\".\norigId: The original ID of the entity.\ncallback: The callback function that will receive the ID of the entity as its first parameter.\n\nReturn value\nIf successful, passes the entity's ID to callback function and sets the HTTP status to 200. If unsuccessful, sets the HTTP status to 500 and passes the error message to the configured error callback function.*"
+  },
+  "rbf_getPicklist": {
+    "scope": "javascript",
+    "prefix": "rbf_getPicklist",
+    "body": "rbf_getPicklist(objName, fieldName, mainValueId, callback, options);",
+    "description": "Purpose\nReturns items available for selected picklist field (including radio buttons and groups of check box fields) as a JSON array. Each array entry has the elements name, id, and code. For fields that allow values in multiple languages, pass a JSON object specifying which language's values to return in the options parameter. If the values are not available in the request language, it will return the values for the tenant's base language. If the specified language is not configured for the tenant, it will throw an error.\n\nParameters\nobjName: The object integration name.\nfieldName: The field integration name.\nmainValueId: The ID of the main picklist item (optional, for dependent picklists only).\ncallback: The callback function that will receive a JSON array of picklist items as its first parameter.\noptions: An optional JSON object that sets the values of optional arguments. Currently this is only used for setting langCode to a valid two-letter ISO language code, for example, {\"langCode\":\"es\"}."
+  },
+  "rbf_getClientIP": {
+    "scope": "javascript",
+    "prefix": "rbf_getClientIP",
+    "body": "rbf_getClientIP();",
+    "description": "Purpose\nRetrieves the client IP address.\nThis API will be available for Platform Application pages, Portal pages (authenticated/un-authenticated), and Setup pages.\n\nReturn value\nIP address"
+  },
+  "rbf_isChecked": {
+    "scope": "javascript",
+    "prefix": "rbf_isChecked",
+    "body": "rbf_isChecked(fieldName);",
+    "description": "Purpose\nReturns true if a checkbox with a given integration name is checked; false otherwise.\n\nParameters\nfieldName: The integration name of checkbox field"
+  },
+  "rbf_isEmpty": {
+    "scope": "javascript",
+    "prefix": "rbf_isEmpty",
+    "body": "rbf_isEmpty(arg);",
+    "description": "Purpose\nReturns true if argument is null or empty string.\n\nParameters\narg: The argument to be tested"
+  },
+  "rbf_isSelected": {
+    "scope": "javascript",
+    "prefix": "rbf_isSelected",
+    "body": "rbf_isSelected(recordId);",
+    "description": "Purpose\nReturns true if record with given id is selected (check box checked) in list view.\n\nParameters\nrecordId: The numeric ID of record"
+  },
+  "rbf_isZero": {
+    "scope": "javascript",
+    "prefix": "rbf_isZero",
+    "body": "rbf_isZero(arg);",
+    "description": "Purpose\nThis function can be useful in validation scripts, it returns true if the argument is any of the following:\n- null\n- the number zero\n- a value that cannot be converted into a number\n\nParameters\narg: The argument to be tested."
+  },
+  "rbf_setChecked": {
+    "scope": "javascript",
+    "prefix": "rbf_setChecked",
+    "body": "rbf_setChecked(fieldName, isChecked);",
+    "description": "Purpose\nSets the state of the checkbox field with the given integration name to checked (true) or unchecked (false). It will invoke any existing onchange event handlers for that field.\n\nParameters\nfieldName: The integration name of the checkbox field\nisChecked: true or false"
+  },
+  "rbf_setErrorsCallback": {
+    "scope": "javascript",
+    "prefix": "rbf_setErrorsCallback",
+    "body": "rbf_setErrorsCallback(callback);",
+    "description": "Purpose\nAssign a callback function to be used when processing API errors, such as errors in SQL queries, etc. By default the API uses the rbf_showInfoMessage() method to display error messages, but this behavior can be customized.\n\nParameters\ncallback: The callback function, which will receive an error message as a first parameter and API name (which caused the error) as second parameter"
+  },
+  "rbf_setLookupFilter": {
+    "scope": "javascript",
+    "prefix": "rbf_setLookupFilter",
+    "body": "rbf_setLookupFilter(fieldname, filterName, filterValue);",
+    "description": "Purpose\nThis function sets a filter on the selection of related records for a lookup field. This method only applies to Selector type lookup fields and cannot be used for dependent lookups. This method can be used for dynamic filtering of available lookup choices.\n\nParameters\nfieldName: Integration name of the lookup field\nfilterName: Name of the related object field used for filtering\nfilterValue: Value of fields to display"
+  },
+  "rbf_setSelected": {
+    "scope": "javascript",
+    "prefix": "rbf_setSelected",
+    "body": "rbf_setSelected(recordId, selected);",
+    "description": "Purpose\nSelects/deselects record with given ID in list view.\n\nParameters\nrecordId: The numeric ID of record\nselected: true or false"
+  },
+  "rbf_startServerDebugging": {
+    "scope": "javascript",
+    "prefix": "rbf_startServerDebugging",
+    "body": "rbf_startServerDebugging(callback);",
+    "description": "Purpose\nStarts server-side debugging. This API is used for debugging purposes.\n\nParameters\ncallback: The function that is executed when server debugging operation is started. This doesn't receive any parameters."
+  },
+  "rbf_stopServerDebugging": {
+    "scope": "javascript",
+    "prefix": "rbf_stopServerDebugging",
+    "body": "rbf_stopServerDebugging(callback);",
+    "description": "Purpose\nStops server-side debugging process started by rbf_startServerDebugging(). This API is used for displaying the results of debugging.\n\nParameters\ncallback: The function that is executed when server debugging operation is completed. This receives a string parameter that contains a summary of debug operations."
+  },
+  "rbf_sendHttpRequest": {
+    "scope": "javascript",
+    "prefix": "rbf_sendHttpRequest",
+    "body": "rbf_sendHttpRequest(url, method, headers, params, body, options);",
+    "description": "Purpose\nPlatform client-side API to provide end-users the ability to invoke RESTful web services from within a Platform page. This API will be available for Platform Application pages and Portal pages and can be leveraged in Custom Script Components. This API will be available in portal pages only if the AJAX calls are enabled for portal users.\n\nParameters\nurl: The REST Service URL. This function argument is mandatory.\nmethod: The HTTP method. This function argument is mandatory. The POST, GET, PUT, and DELETE HTTP Methods are supported.\nheaders: The JSON object with key-value pairs to be forwarded as HTTP Request headers.\nparams: The JSON object with key-value pairs, wherein, each entry denotes HTTP Request parameter name and parameter value.\nbody: The request payload as serialized string literal.\noptions: The JSON object with additional optional arguments as properties:\n\tcallback: Callback function handler. This API has asynchronous behavior. The service response is passed as an JSON object (function argument) to this callback function. This JSON object encapsulates the response status code, headers, and payload.\n\terrorCallback: The error details will be passed as arguments to this error callback handler. If this callback handler is not configured, use the global error handler function 'rbv_errorsCallback'.\n\tuserName: On Platform server side, while establishing HTTP connection to RESTful Service host, Platform supports HTTP Basic Authentication. You must pass the user-name details as this property value. You can also set Platform token as the property value. The Platform token will be resolved and used in the Authorization header of the HTTP request.\n\tpassword: On Platform server side, while establishing HTTP connection to RESTful Service host, Platform supports HTTP Basic Authentication. You must pass password as this property value. You can also set Platform token as property value. The Platform token will be resolved and used in the Authorization header of the HTTP request.\n\thttpReadTimeout: This property configures socket read timeout for the HTTP connection in milliseconds. That default value is 2 minutes. However, this can be configured to a maximum of 8 minutes.\n\tdebug: This property logs debug messages (tenant specific) on Platform server-side, while relaying service request and response.\n\ttimeout: This property configures AJAX call timeout in milliseconds. The default value is 5 minutes. However, this can be configured to a maximum of 15 minutes using this property. On exceeding this period, AJAX call will timeout and result in a timeout error response."
+  },
+  "rbf_invokeSystemRESTAPI": {
+    "scope": "javascript",
+    "prefix": "rbf_invokeSystemRESTAPI",
+    "body": "rbf_invokeSystemRESTAPI(restMethod, httpMethod, headers, params, body, options);",
+    "description": "Purpose\nPlatform client-side API to provide end-users the ability to invoke Platform REST APIs on the same instance from a logged in UI session.\n\nParameters\nrestMethod: The rest method. This function argument is mandatory. See Platform REST Methods for more information on rest methods.\nhttpMethod: The HTTP method. This function argument is mandatory. The POST, GET, PUT, and DELETE HTTP Methods are supported.\nheaders: The JSON object with key-value pairs to be forwarded as HTTP Request headers.\nparams: The JSON object with key-value pairs, wherein, each entry denotes HTTP Request parameter name and parameter value.\nbody: The request payload as serialized string literal.\noptions: The JSON object with additional optional arguments as properties.\n\tcallback: Callback function handler. This API has asynchronous behavior. The service response is passed as an JSON object (function argument) to this callback function. This JSON object encapsulates the response status code, headers, and payload.\n\terrorCallback: The error details will be passed as arguments to this error callback handler. If this callback handler is not configured, use the global error handler function 'rbv_errorsCallback'.\n\tuserName: On Platform server side, while establishing HTTP connection to RESTful Service host, Platform supports HTTP Basic Authentication. You must pass the user-name details as this property value. You can also set Platform token as the property value. The Platform token will be resolved and used in the Authorization header of the HTTP request.\n\tpassword: On Platform server side, while establishing HTTP connection to RESTful Service host, Platform supports HTTP Basic Authentication. You must pass password as this property value. You can also set Platform token as property value. The Platform token will be resolved and used in the Authorization header of the HTTP request.\n\thttpReadTimeout: This property configures socket read timeout for the HTTP connection in milliseconds. That default value is 2 minutes. However, this can be configured to a maximum of 8 minutes.\n\tdebug: This property logs debug messages (tenant specific) on Platform server-side, while relaying service request and response.\n\ttimeout: This property configures AJAX call timeout in milliseconds. The default value is 5 minutes. However, this can be configured to a maximum of 15 minutes using this property. On exceeding this period, AJAX call will timeout and result in a timeout error response."
+  },
+  "rbf_invokeCustomMethod": {
+    "scope": "javascript",
+    "prefix": "rbf_invokeCustomMethod",
+    "body": "rbf_invokeCustomMethod(customMethod, httpMethod, headers, params, body, options);",
+    "description": "Purpose\nPlatform client-side API to provide end-users the ability to invoke Platform REST APIs on the same instance from a logged in UI session.\n\nParameters\ncustomMethod: The endpoint of the custom method . This function argument is mandatory. See Custom Methods for more information on custom methods.\nhttpMethod: The HTTP method. This function argument is mandatory. The POST, GET, PUT, and DELETE HTTP Methods are supported.\nheaders: The JSON object with key-value pairs to be forwarded as HTTP Request headers.\nparams: The JSON object with key-value pairs, wherein, each entry denotes HTTP Request parameter name and parameter value.\nbody: The request payload as serialized string literal.\noptions: The JSON object with additional optional arguments as properties:\n\ttimeout: This property configures AJAX call timeout in milliseconds. The default value is 5 minutes. However, this can be configured to a maximum of 15 minutes using this property. On exceeding this period, AJAX call will timeout and result in a timeout error response.\n\tcallback: Callback function handler. This API has asynchronous behavior. The service response is passed as an JSON object (function argument) to this callback function. This JSON object encapsulates the response status code, headers, and payload.\n\terrorCallback: The error details will be passed as arguments to this error callback handler. If this callback handler is not configured, use the global error handler function 'rbv_errorsCallback'."
+  },
+}

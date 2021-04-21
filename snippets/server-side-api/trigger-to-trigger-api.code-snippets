@@ -1,0 +1,14 @@
+{
+  "rbv_api.setSharedValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setSharedValue",
+    "body": "rbv_api.setSharedValue(name, value);",
+    "description": "Purpose\nThis method must be called within a trigger. It stores a value and makes it available for subsequent triggers through the getSharedValue() method.\n\nParameters\nname: Symbolic name for the stored value\nvalue: stored value\n\nReturn value\nNone"
+  },
+  "rbv_api.getSharedValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getSharedValue",
+    "body": "rbv_api.getSharedValue(name);",
+    "description": "Purpose\nThis method must be called within a trigger. It returns a value stored by the setSharedValue() method.\n\nParameters\nname: Symbolic name for the stored value\n\nReturn value\nShared value or null"
+  },
+}

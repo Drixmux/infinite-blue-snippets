@@ -1,0 +1,32 @@
+{
+  "rbf_setSessionData": {
+    "scope": "javascript",
+    "prefix": "rbf_setSessionData",
+    "body": "rbf_setSessionData(key, value, callback);",
+    "description": "Purpose\nThis function sets user session data as a key/value pair. This data is stored in the Platform session and can be accessed using the function rbf_getSessionData() and removed using the function rbf_removeSessionData(). The maximum number of key/value pairs is 50. If you set a value for an existing key, the new value overrides the previous value.\nIf this function raises an error, Platform sets the HTTP status to 500 and invokes the callback function provided via rbf_setErrorsCallback() and passes that function one of the following messages:\n\t- Empty Key Received — No input was passed\n\t- Invalid Input — Input was in the wrong format\n\t- Limit Violation. Max Allowed: 50 keys reached — User has already stored the maximum of 50 key/value pairs\n\nParameters\nkey: A string that is the lookup key for user session data. The maximum length of a key is 50 characters.\nvalue: The value associated with key. The value can be a boolean, number, string (maximum length is 1000 characters), or null (where null is the value).\ncallback: The callback function that will receive a JSON array of picklist items as its first parameter.\n\nReturn value\nIf successful, passes the string \"Session Data set successfully\" to callback and sets the HTTP status to 200."
+  },
+  "rbf_getSessionData": {
+    "scope": "javascript",
+    "prefix": "rbf_getSessionData",
+    "body": "rbf_getSessionData(key, callback);",
+    "description": "Purpose\nFor custom user session data, this function returns the value for the specified key and passes it to the specified callback function. See User session data for more information about custom user session data.\nIf this function raises an error, Platform sets the HTTP status to 500 and invokes the callback function provided via rbf_setErrorsCallback() and passes that function one of the following messages:\n\t- Empty key received! — No key parameter was passed\n\t- No Mappings Set for [key] — There is no value associated with the specified key or there is no custom session data to retrieve\n\nParameters\nkey: A string that is the lookup key for user session data. The maximum length of a key is 50 characters.\ncallback: The callback function that will receive a JSON array of picklist items as its first parameter.\n\nReturn value\nIf successful, passes the value associated with that key (JavaScript primitive) to callback function and sets the HTTP status to 200"
+  },
+  "rbf_getAllSessionData": {
+    "scope": "javascript",
+    "prefix": "rbf_getAllSessionData",
+    "body": "rbf_getAllSessionData(callback);",
+    "description": "Purpose\nFor custom user session data, this function returns a hashmap of all key/value pairs for that user and passes it to the specified callback function. See User session data for more information about custom user session data.\nIf this function raises an error, Platform sets the HTTP status to 500 and invokes the callback function provided via rbf_setErrorsCallback() and passes that function the following message:\n\t- No Custom Session Data is Set by User — No custom session data exists for the user\n\nParameters\ncallback: The callback function that will receive a JSON array of picklist items as its first parameter.\n\nReturn value\nIf successful, passes a hashmap of all existing key/value pairs to callback function and sets the HTTP status to 200"
+  },
+  "rbf_removeSessionData": {
+    "scope": "javascript",
+    "prefix": "rbf_removeSessionData",
+    "body": "rbf_removeSessionData(key, callback);",
+    "description": "Purpose\nThis function removes the user session data for the specified key.\nIf this function raises an error, Platform sets the HTTP status to 500 and invokes the callback function provided via rbf_setErrorsCallback() and passes that function one of the following messages:\n\t- Empty key received! — No key parameter was passed\n\t- No Mappings Set for [key] — There is no value associated with the specified key\n\nParameters\nkey: A string that is the key for a key/value pair of stored custom session data\ncallback: A function that takes a single data value. This parameter is optional; if it is not passed, the HTTP status will appear in the console but no return value is passed.\n\nReturn value\nIf successful, sets the HTTP status to 200 and passes the string OK to callback as the first argument"
+  },
+  "rbf_removeAllSessionData": {
+    "scope": "javascript",
+    "prefix": "rbf_removeAllSessionData",
+    "body": "rbf_removeAllSessionData(callback);",
+    "description": "Purpose\nThis function removes all session data for the user.\nIf this function raises an error, Platform sets the HTTP status to 500 and invokes the callback function provided via rbf_setErrorsCallback() and passes that function the following message:\n\t- No Custom Session Data is Set by User — No session data exists for the user\n\nParameters\ncallback: The callback function that will receive a JSON array of picklist items as its first parameter."
+  },
+}

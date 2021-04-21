@@ -1,0 +1,98 @@
+{
+  "rbf_createApplicationDef": {
+    "scope": "javascript",
+    "prefix": "rbf_createApplicationDef",
+    "body": "rbf_createApplicationDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nCreates an application from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the application to be created.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_createFieldDef": {
+    "scope": "javascript",
+    "prefix": "rbf_createFieldDef",
+    "body": "rbf_createFieldDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nCreates a field definition from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the field to be created.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_createObjectDef": {
+    "scope": "javascript",
+    "prefix": "rbf_createObjectDef",
+    "body": "rbf_createObjectDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nCreates a new object definition, including any specified fields and relationships, from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the object to be created.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_createRelationshipDef": {
+    "scope": "javascript",
+    "prefix": "rbf_createRelationshipDef",
+    "body": "rbf_createRelationshipDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nCreates a new relationship from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the relationship to be created.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_deleteApplicationDef": {
+    "scope": "javascript",
+    "prefix": "rbf_deleteApplicationDef",
+    "body": "rbf_deleteApplicationDef(appId, callback, errorCallback);",
+    "description": "Purpose\nDeletes an application definition and all of its component definitions.\n\nParameters\nappId: The original application ID.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_deleteFieldDef": {
+    "scope": "javascript",
+    "prefix": "rbf_deleteFieldDef",
+    "body": "rbf_deleteFieldDef(objName, fieldName, callback, errorCallback);",
+    "description": "Purpose\nDeletes a field definition from the specified object.\n\nParameters\nobjName: The object integration name.\nfieldName: The field integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_deleteObjectDef": {
+    "scope": "javascript",
+    "prefix": "rbf_deleteObjectDef",
+    "body": "rbf_deleteObjectDef(objName, callback, errorCallback);",
+    "description": "Purpose\nDeletes an object definition, including its fields and relationships.\n\nParameters\nobjName: The object integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_deleteRelationshipDef": {
+    "scope": "javascript",
+    "prefix": "rbf_deleteRelationshipDef",
+    "body": "rbf_deleteRelationshipDef(relName, callback, errorCallback);",
+    "description": "Purpose\nDeletes a relationship definition.\n\nParameters\nrelName: The relationship integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_getApplicationDef": {
+    "scope": "javascript",
+    "prefix": "rbf_getApplicationDef",
+    "body": "rbf_getApplicationDef(appId,callback,errorCallback);",
+    "description": "Purpose\nRetrieves an XML description of a Platform application.\n\nParameters\nappId: The original application ID.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_getFieldDef": {
+    "scope": "javascript",
+    "prefix": "rbf_getFieldDef",
+    "body": "rbf_getFieldDef(objname, fieldName, callback, errorCallback);",
+    "description": "Purpose\nRetrieves a field definition as an XML document.\n\nParameters\nobjName: The object integration name.\nfieldName: The field integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_getObjectDef": {
+    "scope": "javascript",
+    "prefix": "rbf_getObjectDef",
+    "body": "rbf_getObjectDef(objName, callback, errorCallback);",
+    "description": "Purpose\nRetrieves the specified object definition and returns it as an XML document.\n\nParameters\nobjName: The object integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_getRelationshipDef": {
+    "scope": "javascript",
+    "prefix": "rbf_getRelationshipDef",
+    "body": "rbf_getRelationshipDef(relName, callback, errorCallback);",
+    "description": "Purpose\nRetrieves a relationship definition as an XML document.\n\nParameters\nrelName: The relationship integration name.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_updateApplicationDef": {
+    "scope": "javascript",
+    "prefix": "rbf_updateApplicationDef",
+    "body": "rbf_updateApplicationDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nUpdates an application from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the application to be updated.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_updateFieldDef": {
+    "scope": "javascript",
+    "prefix": "rbf_updateFieldDef",
+    "body": "rbf_updateFieldDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nUpdates a field definition from an XML document.\n\nParameters\nxmlString: ****A string containing the XML document describing the field to be updated.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_updateObjectDef": {
+    "scope": "javascript",
+    "prefix": "rbf_updateObjectDef",
+    "body": "rbf_updateObjectDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nUpdates an object definition from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the object to be updated.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+  "rbf_updateRelationshipDef": {
+    "scope": "javascript",
+    "prefix": "rbf_updateRelationshipDef",
+    "body": "rbf_updateRelationshipDef(xmlString, callback, errorCallback);",
+    "description": "Purpose\nUpdates a relationship definition from an XML document.\n\nParameters\nxmlString: A string containing the XML document describing the relationship to be updated.\ncallback: A function to process the specified operation and receive its result, in the XML format, as the first argument.\nerrorCallback: An optional parameter to receive an error message as the first argument. If you do not specify this parameter in the method call, the callback defined by rbf_setErrorsCallback(callback) is invoked to receive the error message."
+  },
+}

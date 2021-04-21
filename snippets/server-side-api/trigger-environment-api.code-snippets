@@ -1,0 +1,56 @@
+{
+  "rbv_api.isUI": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isUI",
+    "body": "rbv_api.isUI();",
+    "description": "Purpose\nReturns true if the trigger was called or a formula containing this method was invoked from a regular UI page.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isPortal": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isPortal",
+    "body": "rbv_api.isPortal();",
+    "description": "Purpose\nReturns true if a trigger is called or a formula is invoked from a portal UI page.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isMobile": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isMobile",
+    "body": "rbv_api.isMobile();",
+    "description": "Purpose\nReturns true if a trigger is called from a Platform Mobile-Web page.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isAPI": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isAPI",
+    "body": "rbv_api.isAPI();",
+    "description": "Purpose\nReturns true if a trigger is called from a regular Web Services API or REST.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isDelayed": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isDelayed",
+    "body": "rbv_api.isDelayed();",
+    "description": "Purpose\nReturns true if this trigger is delayed and running when no user is logged in.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isImport": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isImport",
+    "body": "rbv_api.isImport();",
+    "description": "Purpose\nReturns true if this trigger is running while importing records from spreadsheet.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isCreate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isCreate",
+    "body": "rbv_api.isCreate();",
+    "description": "Purpose\nReturns true if this trigger is called while creating a new record.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isUpdate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isUpdate",
+    "body": "rbv_api.isUpdate();",
+    "description": "Purpose\nReturns true if trigger is called while updating an existing record.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.isDelete": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isDelete",
+    "body": "rbv_api.isDelete();",
+    "description": "Purpose\nReturns true if trigger is called while deleting an existing record.\n\nReturn value\ntrue or false"
+  },
+}

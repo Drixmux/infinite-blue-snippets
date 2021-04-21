@@ -1,0 +1,62 @@
+{
+  "rbf_getFieldContent": {
+    "scope": "javascript",
+    "prefix": "rbf_getFieldContent",
+    "body": "rbf_getFieldContent(fieldname);",
+    "description": "Purpose\nThis function retrieves the HTML content of a read-only field on the current page.\n\nParameters\n\n\nReturn value\nfieldName: The integration name of field"
+  },
+  "rbf_getFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbf_getFieldValue",
+    "body": "rbf_getFieldValue(fieldName, options);",
+    "description": "Purpose\nThis function retrieves the value of a field on current page with a given integration name. It will return null if the field does not exist or is not included on the current page. For fields that contain values for different languages, pass a langCode value in the options parameter to get the value in a specific language. To retrieve the value in the tenant's base language, do not use the options parameter.\n\nParameters\n\n\nReturn value\nfieldName: The field integration name.\noptions: An optional JSON object that sets the values of optional arguments. Currently this is only used for setting langCode to a valid two-letter ISO language code, for example, {\"langCode\":\"es\"}."
+  },
+  "rbf_getPicklistCode": {
+    "scope": "javascript",
+    "prefix": "rbf_getPicklistCode",
+    "body": "rbf_getPicklistCode(fieldName);",
+    "description": "Purpose\nReturns the integration code of the currently selected option for a picklist, multi-select picklist, group of checkboxes, or radio buttons field. This function works in View and Edit pages.\n\nParameters\nfieldName: The integration name of field"
+  },
+  "rbf_getPicklistCodes": {
+    "scope": "javascript",
+    "prefix": "rbf_getPicklistCodes",
+    "body": "rbf_getPicklistCodes(fieldName);",
+    "description": "Purpose\nThis function returns a list of comma-separated integration codes corresponding to the currently selected options in a picklist, multi-select picklist, or group of checkboxes field. This function works in view and edit pages.\n\nParameters\nfieldName: The integration name of field"
+  },
+  "rbf_setFieldContent": {
+    "scope": "javascript",
+    "prefix": "rbf_setFieldContent",
+    "body": "rbf_setFieldContent(fieldname, value);",
+    "description": "Purpose\nThis function sets the HTML content for a formula or template field on current page. It will have no effect if the field does not exist on the current page.\n\nParameters\nfieldName: The integration name of field\nvalue: The new value to set"
+  },
+  "rbf_setFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbf_setFieldValue",
+    "body": "rbf_setFieldValue(fieldname, value, options);",
+    "description": "Purpose\nThis function sets the value of a field on current page with a given integration name. It will run the field's onchange event handler if there is event handling code attached to that event. For fields that contain values for different languages, pass a langCode value in the options parameter to set the value in a specific language. To set the value in the tenant's base language, do not use the options parameter.\n\nParameters\nfieldName: The integration name of field to set\nvalue: Value to set\noptions: An optional JSON object that sets the values of optional arguments. Currently this is only used for setting langCode to a valid two-letter ISO language code, for example, {\"langCode\":\"es\"}."
+  },
+  "rbf_setFieldDisabled": {
+    "scope": "javascript",
+    "prefix": "rbf_setFieldDisabled",
+    "body": "rbf_setFieldDisabled(fieldname, isDisabled, options);",
+    "description": "Purpose\nThis function disables or enables an input field on the current page. It will have no effect if the field does not exist on the current page. For fields that allow values in multiple languages, use the options parameter to specify which language for which to disable/enable the input field. If the language code is invalid, or is not included in the tenant's supported languages, the field will not be disabled or enabled.\n\nParameters\nfieldName: The integration name of field\nisDisabled: The boolean value for \"disabled\" field's property\noptions: A JSON object containing langCode, whose value is an array of two-letter ISO language codes, for example, {\"langCode\":[\"ar\",\"he\",\"fr\"]}. The field will be disabled/enabled for those languages."
+  },
+  "rbf_setFieldReadOnly": {
+    "scope": "javascript",
+    "prefix": "rbf_setFieldReadOnly",
+    "body": "rbf_setFieldReadOnly(fieldname, isReadOnly, options);",
+    "description": "Purpose\n\n\nParameters\nfieldName: The integration name of field\nisReadOnly: The boolean value for \"read-only\" field's property\noptions: A JSON object containing langCode, whose value is an array of two-letter ISO language codes, for example, {\"langCode\":[\"ar\",\"he\",\"fr\"]}. The field will be disabled/enabled for those languages."
+  },
+  "rbf_setPicklistCode": {
+    "scope": "javascript",
+    "prefix": "rbf_setPicklistCode",
+    "body": "rbf_setPicklistCode(fieldName, optCode);",
+    "description": "Purpose\nThis function can be executed on top of dependent picklist, mutli-picklist, and group of checkboxes. You can provide a single value or an array of values for the optCode parameter.\n\nParameters\nfieldName: The integration name of field\noptCode: This value will be compared to the integration code of a particular picklist option"
+  },
+  "rbf_setReferenceRecordFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbf_setReferenceRecordFieldValue",
+    "body": "rbf_setReferenceRecordFieldValue(fieldName,objectOriginalId,value);",
+    "description": "Purpose\nThis function sets the value of a reference field on current page with a given integration name, objectOriginalId and record ID.It will run the field's onchange event handler if there is event handling code attached to that event.\nThis accepts objectOriginalId of the applicable objects (selected during reference field creation) only in the reference record field.\n\nParameters\nfieldName: The integration name of field\nobjectOriginalId: The original ID of the object.\nvalue: The selected record ID. This is an optional parameter.\nIf this parameter is null, it sets only the value of the selected object."
+  },
+}

@@ -1,0 +1,14 @@
+{
+  "rbv_api.createActivityLog": {
+    "scope": "javascript",
+    "prefix": "rbv_api.createActivityLog",
+    "body": "rbv_api.createActivityLog(objName, Id, text);",
+    "description": "Purpose\nCreates an activity log record on an existing object record. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\ntext: Text of Activity Log record\n\nReturn value\nNone"
+  },
+  "rbv_api.log": {
+    "scope": "javascript",
+    "prefix": "rbv_api.log",
+    "body": "rbv_api.log(logName, text);",
+    "description": "Purpose\nCreates an log entry in the specified system log file.\n\nParameters\nlogName: The name of one of the system log files—webapi, rest, jobs, debug—where your log entry will be recorded.\ntext: The text entry to be logged.\n\nReturn value\nNone"
+  },
+}

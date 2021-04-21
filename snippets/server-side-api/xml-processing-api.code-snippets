@@ -1,0 +1,14 @@
+{
+  "rbv_api.parseXML": {
+    "scope": "javascript",
+    "prefix": "rbv_api.parseXML",
+    "body": "rbv_api.parseXML(xmlString);",
+    "description": "Purpose\nParses an XML string and returns an instance of org.w3c.dom.Element corresponding to the XML root. JavaScript can use all methods of this Java object. See http://www.w3.org/2003/01/dom2-javadoc/org/w3c/dom/Element.html for more info.\n\nParameters\nxmlString: An XML document as a string\n\nReturn value\nRoot element of an XML document"
+  },
+  "rbv_api.evalXpath": {
+    "scope": "javascript",
+    "prefix": "rbv_api.evalXpath",
+    "body": "rbv_api.evalXpath(xmlString, xpathExpr);",
+    "description": "Purpose\nParses an XML string and evaluates an XPath expression. See http://www.w3schools.com/xsl for more information on XPath.\n\nParameters\nxmlString: XML document as a string\nxpathExpr: XPath expression to evaluate\n\nReturn value\nResult of XPath evaluation"
+  },
+}

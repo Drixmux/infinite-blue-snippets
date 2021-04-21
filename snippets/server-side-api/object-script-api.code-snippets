@@ -1,0 +1,104 @@
+{
+  "rbv_api.getFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getFieldValue",
+    "body": "rbv_api.getFieldValue(objName, Id, fieldName);",
+    "description": "Purpose\nThis object script method returns the value of a field from an existing object record. You can access fields using template tokens instead of this method for better performance.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: Integration name of field to retrieve value from\n\nReturn value\nValue of requested field"
+  },
+  "rbv_api.getNumFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getNumFieldValue",
+    "body": "rbv_api.getNumFieldValue(objName, Id, fieldName);",
+    "description": "Purpose\nThis Object Script method returns the numeric value of a field from an existing object record. This method is similar to getFieldValue(), but ensures that the returned value is a number or 0 if the field has a NULL value.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: Integration name of field\n\nReturn value\nValue of requested field"
+  },
+  "rbv_api.getBinaryData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getBinaryData",
+    "body": "rbv_api.getBinaryData(objName, Id, fieldName);",
+    "description": "Purpose\nThis Object Script method returns uploaded file as a base-64 encoded string. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: integration name of file upload field to retrieve value from\n\nReturn value\nA base-64 encoded string or null"
+  },
+  "rbv_api.getTextData": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getTextData",
+    "body": "rbv_api.getTextData(objName, Id, fieldName);",
+    "description": "Purpose\nThis Object Script method returns uploaded file as a plain-text string. Use only with plain-text uploaded files, such as HTML or CSV. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: integration name of File Upload field to retrieve value from\n\nReturn value\nA plain-text string or Null"
+  },
+  "rbv_api.isFieldEmpty": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isFieldEmpty",
+    "body": "rbv_api.isFieldEmpty(objName, Id, fieldName);",
+    "description": "Purpose\nThis Object Script method checks whether value of particular field is null or empty without bringing the actual value into the formula.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: Integration name of file upload field to retrieve value from\n\nReturn value\ntrue if value of a field from an existing object record is null or empty, false otherwise"
+  },
+  "rbv_api.setFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setFieldValue",
+    "body": "rbv_api.setFieldValue(objName, Id, fieldname, newValue);",
+    "description": "Purpose\nThis Object Script method sets the value of a field for an existing object record. For picklists and status fields, use integration names, since they will be valid after publishing and installing your application, unlike numeric ids.\n\nParameters\nobjName: Integration name of object\nId: ID of record\nfieldName: Integration name of field to set value in\nnewValue: Value to be set\n\nReturn value\nNone"
+  },
+  "rbv_api.setBinaryFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setBinaryFieldValue",
+    "body": "rbv_api.setBinaryFieldValue(objName, Id, fieldname, encodedValue, contentType, fileName);",
+    "description": "Purpose\nThis Object Script method sets the value of a file upload field using a base-64 encoded string. This method works only with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record to modify\nfieldName: Integration name of the field to update\nencodedValue: Base-64 encoded content of value to be set\ncontentType: MIME content type\nfileName: Name of file to be stored\n\nReturn value\nNone"
+  },
+  "rbv_api.setTextFieldValue": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setTextFieldValue",
+    "body": "rbv_api.setTextFieldValue(objName, Id, fieldname, textValue, contentType, fileName);",
+    "description": "Purpose\nThis Object Script method sets the value of a text field to the name of a file to be stored. This method only works with native Platform objects.\n\nParameters\nobjName: Integration name of object\nId: ID of record to modify\nfieldName: Integration name of the field to update\ntextValue: Plain text content of value to be set\ncontentType: MIME content type\nfileName: Name of file to be stored\n\nReturn value\nNone"
+  },
+  "rbv_api.createRecord": {
+    "scope": "javascript",
+    "prefix": "rbv_api.createRecord",
+    "body": "rbv_api.createRecord(objName, arr);",
+    "description": "Purpose\nThis Object Script method creates a new object record from the values passed in. The Object Script API invokes triggers on create, on update and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue().\n\nParameters\nobjName: Integration name of the type of object to create\narr: JavaScript array of field name/value pairs (required fields must be supplied)\n\nReturn value\nObject ID of the newly created record"
+  },
+  "rbv_api.updateRecord": {
+    "scope": "javascript",
+    "prefix": "rbv_api.updateRecord",
+    "body": "rbv_api.updateRecord(objName, Id, arr);",
+    "description": "Purpose\nThis Object Script method updates a record. Only supply values for the fields you want to change, others fields will remain unchanged. The Object Script API invokes triggers on create, on update and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue().\n\nParameters\nobjName: The object integration name.\nId: The ID of the record.\narr: JavaScript array of field name/value pairs (required fields must be supplied)\n\nReturn value\nNone"
+  },
+  "rbv_api.cloneRecord": {
+    "scope": "javascript",
+    "prefix": "rbv_api.cloneRecord",
+    "body": "rbv_api.cloneRecord(objName, ID, arr);",
+    "description": "Purpose\nThis Object Script method creates a new object record from the record and values passed in. The Object Script API invokes triggers on create, on update, and on delete the same way as the Platform user interface does. The ID of a newly created record is available for other triggers in update chain through the shared value, newID_objectName, that can be retrieved using getSharedValue().\n\nParameters\nobjName: Integration name of the type of object to create\nID: ID of the record to clone\narr: JavaScript array of field name/value pairs (required fields must be supplied)\n\nReturn value\nObject ID of the newly created record"
+  },
+  "rbv_api.attach": {
+    "scope": "javascript",
+    "prefix": "rbv_api.attach",
+    "body": "rbv_api.attach(relName, objName1, Id1, objName2, Id2);",
+    "description": "Purpose\nThis Object Script method creates a relationship between two records and returns true if a new relationship has been successfully created.\n\nParameters\nrelName: Integration name of the relationship\nobjName1: Integration name of the first object\nId1: ID of the first object record\nobjName2:Integration name of the second object\nId2. ID of the second object record\n\nReturn value\ntrue, if association succeeded"
+  },
+  "rbv_api.detach": {
+    "scope": "javascript",
+    "prefix": "rbv_api.detach",
+    "body": "rbv_api.detach(relName, objName1, Id1, objName2, Id2);",
+    "description": "Purpose\nThis Object Script method removes a relationship between two records.\n\nParameters\nrelName: Integration name of the relationship\nobjName1: Integration name of the first object\nId1: ID of the first Object record\nobjName2: Integration name of the second object\nId2: ID of the second object record\n\nReturn value\nNone"
+  },
+  "rbv_api.runTrigger": {
+    "scope": "javascript",
+    "prefix": "rbv_api.runTrigger",
+    "body": "rbv_api.runTrigger(objName, Id, triggerOrigId, checkValidation, runRecursions);",
+    "description": "Purpose\nThis Object Script method runs a trigger on the specified object. This method will invoke a trigger regardless of timing options, such as On After Update. For HTTP calls, consider using sendHttpGet() or setHttpPost() instead.\n\nParameters\nobjName: Integration name of the object\nId: ID of the record on which to run the trigger\ntriggerOrigId: Integration name (string) or original ID (string) of the trigger\ncheckValidation: true or false. If set to true, check validation formula before running trigger, otherwise ignore validation formula.\nrunRecursions: true or false. When runRecursions is set to true, configures the trigger to run recursively, assuming recursive properties are set on the trigger definition page. Default value is false.\n\nReturn value\nNone"
+  },
+  "rbv_api.deleteRecord": {
+    "scope": "javascript",
+    "prefix": "rbv_api.deleteRecord",
+    "body": "rbv_api.deleteRecord(objName, Id);",
+    "description": "Purpose\nThis Object Script method deletes the specified record.\n\nParameters\nobjName: Integration name of object\nId: ID of record to delete\n\nReturn value\nNone"
+  },
+  "rbv_api.setCreator": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setCreator",
+    "body": "rbv_api.setCreator(objName, Id, creatorName, creatorId);",
+    "description": "Purpose\nThis Object Script trigger method sets the Created By field value for the selected record. This method only works with native Platform objects.\n\nParameters\nobjName: The object integration name.\nId: The ID of the record.\ncreatorName: Integration name of the user or portal user to be set as creator\ncreatorId: ID of the creator record\n\nReturn value\nNone"
+  },
+  "rbv_api.startApproval": {
+    "scope": "javascript",
+    "prefix": "rbv_api.startApproval",
+    "body": "rbv_api.startApproval(objName, Id, actionId);",
+    "description": "Purpose\nStarts the approval process on a selected record with the Approval attribute.\n\nParameters\nobjName: The object integration name.\nId: The ID of the record.\nactionId: The original ID of the workflow action that started the approval process (can be found on the workflow action's view page).\n\nReturn value\nNone"
+  },
+}

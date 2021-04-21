@@ -1,0 +1,50 @@
+{
+  "rbf_getDate": {
+    "scope": "javascript",
+    "prefix": "rbf_getDate",
+    "body": "rbf_getDate(value);",
+    "description": "Purpose\nThis function creates a JavaScript Date Object from a string. It returns null for an empty string.\n\nParameters\nvalue: The string to convert to a Date Object"
+  },
+  "rbf_getDigits": {
+    "scope": "javascript",
+    "prefix": "rbf_getDigits",
+    "body": "rbf_getDigits(value);",
+    "description": "Purpose\nExtracts digits from string value and ignores all other characters.\n\nParameters\nvalue: The string from which to extract digits"
+  },
+  "rbf_getFloat": {
+    "scope": "javascript",
+    "prefix": "rbf_getFloat",
+    "body": "rbf_getFloat(value);",
+    "description": "Purpose\nConverts a given value from a string into a float number. It ignores symbols (e.g., $).\n\nParameters\nvalue: The string to convert"
+  },
+  "rbf_formatCurrency": {
+    "scope": "javascript",
+    "prefix": "rbf_formatCurrency",
+    "body": "rbf_formatCurrency(value, currSymbol, showZero, decPlaces, thsSep);",
+    "description": "Purpose\nFormats a given number into a currency string.\n\nParameters\nvalue: The number to format\ncurrSymbol: currency symbol ($ by default)\nshowZero: If true, empty and NaN values are treated as \"$0.00\", otherwise as empty string \"\"\ndecPlaces: The number of decimal places (2 by default)\nthsSep: The thousands separator (, by default)"
+  },
+  "rbf_formatDate": {
+    "scope": "javascript",
+    "prefix": "rbf_formatDate",
+    "body": "rbf_formatDate(d, format);",
+    "description": "Purpose\nThis function formats a JavaScript Date object into a string suitable for storing in Date input fields.\n\nParameters\nd: A JavaScript Date object\nformat: The format to apply to the date, such as dd/mm/yyyy, mm.dd.yy, etc."
+  },
+  "rbf_formatNumber": {
+    "scope": "javascript",
+    "prefix": "rbf_formatNumber",
+    "body": "rbf_formatNumber(value, decPlaces, decSeparator, thsSep);",
+    "description": "Purpose\nFormats a given number into a decimal string.\n\nParameters\nvalue: The number to format\ndecPlaces: The number of decimal places (2 by default)\ndecSeparator: The symbol used to separate the integer part from the fractional part of a decimal number. (\".\" by default)\nthsSep:The thousands separator (none by default)."
+  },
+  "rbf_formatUsingMask": {
+    "scope": "javascript",
+    "prefix": "rbf_formatUsingMask",
+    "body": "rbf_formatUsingMask(value, mask);",
+    "description": "Purpose\nFormats a string containing digits as specified in the mask parameter.\n\nParameters\nvalue: The string to format\nmask: The input mask, which uses # as a placeholder for a digit"
+  },
+  "rbf_getInt": {
+    "scope": "javascript",
+    "prefix": "rbf_getInt",
+    "body": "rbf_getInt(value);",
+    "description": "Purpose\nThis function converts a given value from a string into an integer number. It ignores symbols (e.g., $).\n\nParameters\nvalue: The string to convert"
+  },
+}

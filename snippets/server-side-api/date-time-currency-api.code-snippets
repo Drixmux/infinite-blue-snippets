@@ -1,0 +1,56 @@
+{
+  "rbv_api.getCurrentDate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getCurrentDate",
+    "body": "rbv_api.getCurrentDate();",
+    "description": "Purpose\nReturns a string corresponding to the current date, relative to the current user's time zone. Use new Date() to create a new instance of a JavaScript Date.\n\nReturn value\nCurrent date as a string"
+  },
+  "rbv_api.firstDayOfMonth": {
+    "scope": "javascript",
+    "prefix": "rbv_api.firstDayOfMonth",
+    "body": "rbv_api.firstDayOfMonth(offset);",
+    "description": "Purpose\nReturns a value of 12AM on the first day of the current month plus or minus the number of months specified.\n\nParameters\noffset: Number of months to offset the current month (positive, negative, or zero)\n\nReturn value\nDate as a string."
+  },
+  "rbv_api.firstDayOfQuarter": {
+    "scope": "javascript",
+    "prefix": "rbv_api.firstDayOfQuarter",
+    "body": "rbv_api.firstDayOfQuarter(offset);",
+    "description": "Purpose\nReturns a value of 12AM on the first day of the current quarter plus or minus the number of quarters specified.\n\nParameters\noffset: Number of quarters to offset the current quarter (positive, negative, or zero)\n\nReturn value\nDate as a string."
+  },
+  "rbv_api.firstDayOfYear": {
+    "scope": "javascript",
+    "prefix": "rbv_api.firstDayOfYear",
+    "body": "rbv_api.firstDayOfYear(offset);",
+    "description": "Purpose\nReturns a value of 12AM on the first day of the current year, plus or minus the number of years specified.\n\nParameters\noffset: Number of years to offset the current year (positive, negative, or zero)\n\nReturn value\nDate as a string"
+  },
+  "rbv_api.formatDate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.formatDate",
+    "body": "rbv_api.formatDate(date, pattern);",
+    "description": "Purpose\nFormats a JavaScript Date class instance as specified in the pattern parameter.\n\nParameters\ndate: instance of JavaScript Date class\npattern: A pattern specified using the conventions defined in the Java SimpleDateFormat class\n\nReturn value\nDate formatted as a string"
+  },
+  "rbv_api.formatNumber": {
+    "scope": "javascript",
+    "prefix": "rbv_api.formatNumber",
+    "body": "rbv_api.formatNumber(number, decPlaces, decSeparator, thSeparator);",
+    "description": "Purpose\nFormats a decimal number to a string according to the specified parameters.\n\nParameters\nnumber: Number to be formatted\ndecPlaces: Number of decimal places to be used\ndecSeparator: Separator to use for decimal places\nthSeparator: Character separator to use for thousands\n\nReturn value\nNumber as a formatted string."
+  },
+  "rbv_api.formatCurrency": {
+    "scope": "javascript",
+    "prefix": "rbv_api.formatCurrency",
+    "body": "rbv_api.formatCurrency(number, currSymbol, decPlaces, decSeparator, thSeparator);",
+    "description": "Purpose\nFormats a currency number as a string according to the specified parameters.\n\nParameters\nnumber: Number to be formatted\ncurrSymbol: Currency symbol to use in formatted string\ndecPlaces: Number of decimal places to be used\ndecSeparator: Separator to use for decimal places\nthSeparator: Character separator to use for thousands\n\nReturn value\nNumber as a formatted string."
+  },
+  "rbv_api.getExchangeRate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.getExchangeRate",
+    "body": "rbv_api.getExchangeRate(srcCode, destCode, date);",
+    "description": "Purpose\nReturns an exchange rate between two currencies on a given date.\n\nParameters\nsrcCode: Currency code to convert from\ndestCode: Currency code to convert to\ndate: Date for exchange rate (Defaults to current date)\n\nReturn value\nRate as a decimal number"
+  },
+  "rbv_api.setExchangeRate": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setExchangeRate",
+    "body": "rbv_api.setExchangeRate(srcCode, destCode, rate, date);",
+    "description": "Purpose\nSets an exchange rate between two currencies on a given date.\n\nParameters\nsrcCode: Currency code to convert from\ndestCode: Currency code to convert to\nrate: Exchange rate, a decimal value, to be used for conversion.\ndate: Date for exchange rate (Defaults to current date)\n\nReturn value\nNone"
+  },
+}

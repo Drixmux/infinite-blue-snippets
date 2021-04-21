@@ -1,0 +1,38 @@
+{
+  "rbv_api.print": {
+    "scope": "javascript",
+    "prefix": "rbv_api.print",
+    "body": "rbv_api.print(text);",
+    "description": "Purpose\nPrints text messages in the formula and trigger debugging windows. End-users will not see the messages at runtime.\n\nParameters\ntext: Message to print in the debugging window\n\nReturn value\nNone"
+  },
+  "rbv_api.println": {
+    "scope": "javascript",
+    "prefix": "rbv_api.println",
+    "body": "rbv_api.println(text);",
+    "description": "Purpose\nPrints text messages in the formula debugging window, adding an end-of-line \"\\n\" symbol after the output. End-users will not see the messages at runtime. The print() and println() methods can also be used in JavaScript reports to generate output.\n\nParameters\ntext: message to be output\n\nReturn value\nNone"
+  },
+  "rbv_api.printARR": {
+    "scope": "javascript",
+    "prefix": "rbv_api.printARR",
+    "body": "rbv_api.printARR(arr);",
+    "description": "Purpose\nPrints the contents of a JavaScript array in the format key => value.\n\nParameters\narr: JavaScript array to print\n\nReturn value\nNone"
+  },
+  "rbv_api.setVerbose": {
+    "scope": "javascript",
+    "prefix": "rbv_api.setVerbose",
+    "body": "rbv_api.setVerbose(flag);",
+    "description": "Purpose\nSets the verbose flag for debugging formulas and triggers. Methods such as selectQuery(), createRecord(), updateRecord(), will generate additional debugging output if this flag is set to true.\n\nParameters\nflag: true or false\n\nReturn value\nNone"
+  },
+  "rbv_api.isVerbose": {
+    "scope": "javascript",
+    "prefix": "rbv_api.isVerbose",
+    "body": "rbv_api.isVerbose();",
+    "description": "Purpose\nReturns the verbose flag that can be set using the setVerbose() method.\n\nReturn value\ntrue or false"
+  },
+  "rbv_api.inArgs": {
+    "scope": "javascript",
+    "prefix": "rbv_api.inArgs",
+    "body": "rbv_api.inArgs(x, arg0, arg1);",
+    "description": "Purpose\nReturns the position (0-based index) of the first argument in a variable length list of remaining arguments.\n\nParameters\nx: variable\nargs: One or more arguments\n\nReturn value\ntrue or false"
+  },
+}
